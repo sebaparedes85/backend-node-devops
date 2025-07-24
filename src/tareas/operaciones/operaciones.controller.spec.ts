@@ -20,6 +20,7 @@ describe('AppController (e2e)', () => {
     return request(app.getHttpServer())
       .get('/operaciones')
       .query({ operacion: 'suma', a: 10, b: 30 })
+      .expect('Content-type', /application\/json/)
       .expect(200);
   });
 });

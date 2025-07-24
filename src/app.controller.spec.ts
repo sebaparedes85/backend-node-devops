@@ -6,7 +6,9 @@ import * as request from 'supertest';
 import { App } from 'supertest/types';
 import { AppModule } from './../src/app.module';
 
+// describe (nombre de conjun de pruebas , funcion de pruebas )
 describe('AppController', () => {
+
   let appController: AppController;
 
   beforeEach(async () => {
@@ -19,9 +21,13 @@ describe('AppController', () => {
   });
 
   describe('Probar el modulo raiz del proyecto', () => {
-    test('Esto deberia retornar hola mundo en ingles"', () => {
+
+    test('Esto deberia retornar hola mundo en ingles', () => {
+
       expect(appController.getHello()).toBe('Hello World!!');
+
     });
+
   });
 });
 
